@@ -11,9 +11,8 @@ var server = require(isUseHTTPs ? 'https' : 'http');
 
 //cert options
 var options = {
-    key: fs.readFileSync(path.join(__dirname, 'keys/kazastream.key')),
-    cert: fs.readFileSync(path.join(__dirname, 'keys/542cc3f680793cdf.crt')),
-    ca:[fs.readFileSync('keys/1.crt'),fs.readFileSync('keys/2.crt'),fs.readFileSync('keys/3.crt')]
+    key: fs.readFileSync(path.join(__dirname, 'keys/privatekey.pem')),
+    cert: fs.readFileSync(path.join(__dirname, 'keys/certificate.pem'))
 };
 
 function serverHandler(request, response) {
